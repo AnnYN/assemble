@@ -1,0 +1,48 @@
+     1                                 %line 1+1 memory.asm
+     2                                 [segment .data]
+     3 00000000 04000000               a dd 4
+     4 00000004 CDCC8C40               b dd 4.4
+     5 00000008 00000000<rept>         c times 10 dd 0
+     6 00000030 01000200               d dw 1,2
+     7 00000034 FB                     e db 0xfb
+     8 00000035 68656C6C6F2C20776F-    f db "hello, world", 0
+     9 00000035 726C6400           
+    10                                 
+    11                                 [segment .bss]
+    12                                 
+    13 00000000 <gap>                  g resd 1
+    14 00000004 <gap>                  h resd 10
+    15 0000002C <gap>                  i resd 100
+    16                                 
+    17                                 [segment .text]
+    18                                 [global main]
+    19                                 
+    20                                 main:
+    21 00000000 55                     push rbp
+    22 00000001 4889E5                 mov rbp, rsp
+    23 00000004 4883EC10               sub rsp, 16
+    24                                 
+    25 00000008 31C0                   xor eax,eax
+    26 0000000A C9                     leave
+    27 0000000B C3                     ret
+    28                                 
+    29                                 
+    30                                 
+    31                                 
+    32                                 
+    33                                 
+    34                                 
+    35                                 
+    36                                 
+    37                                 
+    38                                 
+    39                                 
+    40                                 
+    41                                 
+    42                                 
+    43                                 
+    44                                 
+    45                                 
+    46                                 
+    47                                 
+    48                                 
