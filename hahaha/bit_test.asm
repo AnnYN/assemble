@@ -7,7 +7,8 @@ _start:
 	; insert code in below
 	mov eax, 4 ; 0100b
 	bt eax, 2 ; bit 2 in eax == 1
-	bt eax, 1 ; bit 1 in eax == 0	
+	bt eax, 1 ; bit 1 in eax == 0
+	
 	; exit syscall
 	xor rax, rax ; clear
 	xor rbx, rbx ; registers
